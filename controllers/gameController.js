@@ -42,6 +42,7 @@ var gameController = function(sqlConfig) {
     connection.connect()
       .then(function () {
         //creating MS SQL prepared statement (aka parameterized query)
+        //for all database create/update operations it is safer and more efficient to use prepared statement rather than regular query
         var ps = new sql.PreparedStatement(connection);
         //list of supported datatypes https://github.com/patriksimek/node-mssql#data-types
         ps.input('title', sql.NVarChar(500));
