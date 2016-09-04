@@ -1,9 +1,9 @@
 #Welcome to RESTful Quickstart
-RESTful Quickstart is complete *Node.js* API hooked to *Azure SQL database*. It's based on modern REST architecture, shows how to implement GET, POST, PUT and DELETE verbs. It provides directory stucture, initial environment setup and complete real world example. Technologies used: __Express__, __MSSQL__, __ESLint__, __Nodemon__.
+RESTful Quickstart is complete *Node.js* API hooked to *Azure SQL database*. It's based on modern REST architecture and shows how to implement GET, POST, PUT and DELETE methods. It provides directory stucture, initial environment setup and complete real world example. Technologies used: __Express__, __MSSQL__, __ESLint__, __Nodemon__.
 
 ###Getting started!
 To set project up:
-  1. Install Node, preferably 5.0 or greater
+  1. Install Node, preferably __5.0__ or greater
   2. Install __Git__
   3. Clone the repository `git clone https://github.com/blurbyte/restful-quickstart.git`
   4. Install two Chrome plugins: __Postman__ (very handy tool for API testing) and __JSON Formatter__ (makes JSON easy to read in browser)
@@ -44,7 +44,7 @@ List of important files and directories:
 ###Azure SQL database setup
   1. To created Azure SQL __logical server__ and __database__ for demo API follow closely steps described in [this short article](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/), don't forget to give database meaningful name such as *BestGames*
   2. Connect to recently created database via SQL Server Management Studio (__SSMS__), select it from list *Databases > BestGames* and open up new SQL Query window <kbd>Ctrl</kbd> + <kbd>N</kbd>
-  3. To keep things simple create one new __table__ called *game* by executing query <kbd>F5</kbd>:
+  3. To keep things simple create one new __table__ called *game* by executing query <kbd>F5</kbd> :
   
     ```sql
     create table game(
@@ -94,7 +94,7 @@ To test __PUT__ method (it updates record in database)
   2. Further steps are exacly the same as in POST: set request header and body, check for response body and status
   3. Try again with similar request body but omit some keys and values
 
-To test _DELETE__ method (it deletes record from database)
+To test __DELETE__ method (it deletes record from database)
   1. Select __DELETE__ and type __http://localhost:5000/api/games/1__
   2. Send the request and check response status
   <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-delete.png" alt="Testing DELETE with Postman" width="600">
