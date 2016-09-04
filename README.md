@@ -74,24 +74,27 @@ List of available demo API routes with associated REST verbs
 To test __GET__ method of our demo API (it reads records from database):
   1. Select __GET__ from drop-down and type required url into input box, in this case __http://localhost:5000/api/games/__
   2. Press *Send* and voilà – in the section below response *body* and *http status code* will be displayed
-  <img src="http://eloriel.azureedge.net/restful-quickstart/restful-quickstart-postman-get-example.png" alt="Testing GET method with Postman for multiple elements" width="600">
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-get-example.png" alt="Testing GET method with Postman for multiple elements" width="600">
   3. Type __http://localhost:5000/api/games/1__ and check response for single item (response body and status code)  
-  <img src="http://eloriel.azureedge.net/restful-quickstart/restful-quickstart-postman-get-example2.png#1" alt="Testing GET method with Postman for single id" width="600">
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-get-example2.png" alt="Testing GET method with Postman for single id" width="600">
   4. Do the same for *id* which doesn't exist, for example __http://localhost:5000/api/games/47__
+
 To test __POST__ method (it creates new record in database):
   1. Select __POST__ and type __http://localhost:5000/api/games/__
   2. In section just below serch box select *Headers* tab and provide __Content-Type__ as a key and __application/json__ as a value
-  <img src="http://eloriel.azureedge.net/restful-quickstart/restful-quickstart-postman-post-header.png" alt="Setting up POST method Header in Postman" width="600">        
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-post-header.png" alt="Setting up POST method Header in Postman" width="600">        
   3. Select *Body* tab and *raw* option
   4. Type all required info about game in a textbox in JSON format
-  <img src="http://eloriel.azureedge.net/restful-quickstart/restful-quickstart-postman-post-body.png" alt="Setting up POST method Header in Postman" width="600">
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-post-body.png" alt="Setting up POST method Header in Postman" width="600">
   5. After sending request check response body and status
   6. Try to send exacly same data again
+
 To test __PUT__ method (it updates record in database)
   1. Select __PUT__ and type __http://localhost:5000/api/games/1__
   2. Further steps are exacly the same as in POST: set request header and body, check for response body and status
   3. Try again with similar request body but omit some keys and values
+
 To test _DELETE__ method (it deletes record from database)
   1. Select __DELETE__ and type __http://localhost:5000/api/games/1__
   2. Send the request and check response status
-  <img src="http://eloriel.azureedge.net/restful-quickstart/restful-quickstart-postman-delete.png" alt="Testing DELETE with Postman" width="600">
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-delete.png" alt="Testing DELETE with Postman" width="600">
