@@ -1,7 +1,7 @@
-#Welcome to RESTful Quickstart
+# Welcome to RESTful Quickstart
 RESTful Quickstart is complete *Node.js* API hooked to *Azure SQL database*. It's based on modern REST architecture and shows how to implement GET, POST, PUT and DELETE methods. It provides directory stucture, initial environment setup and complete real world example. Technologies used: __Express__, __MSSQL__, __ESLint__, __Nodemon__.
 
-###Getting started!
+### Getting started!
 To set project up:
   1. Install Node, preferably __5.0__ or greater
   2. Install __Git__
@@ -17,7 +17,7 @@ To set project up:
   11. Take some time and review application code, first __app.js__ file, than __routes__ directory and finally __controllers__ folder
   12. Create your own database and hook your own API to it 👍
 
-###Comprehensive modules overview
+### Comprehensive modules overview
  Module | Description
  --- | ---
  __express__ | Node.js web application framework, handles routing, server requests and responses
@@ -29,7 +29,7 @@ To set project up:
  __chalk__ | Cool text colors and backgrounds for Terminal
  __npm-run-all__ | Allows to run multiple npm scripts in parallel
  
-###Directories structure explained
+### Directories structure explained
 List of important files and directories:
   * *package.json* – list of all installed npm modules
   * *.npmrc* – tells npm to save the exact version of the module
@@ -41,36 +41,36 @@ List of important files and directories:
   * *__routes__/gameRouter.js* – demo API routes declarations
   * *__controllers__/gameController.js* – REST verbs implementation and logic
 
-###Azure SQL database setup
+### Azure SQL database setup
   1. To created Azure SQL __logical server__ and __database__ for demo API follow closely steps described in [this short article](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/), don't forget to give database meaningful name such as *BestGames*
   2. Connect to recently created database via SQL Server Management Studio (__SSMS__), select it from list *Databases > BestGames* and open up new SQL Query window <kbd>Ctrl</kbd> + <kbd>N</kbd>
   3. To keep things simple create one new __table__ called *game* by executing query <kbd>F5</kbd> :
   
-    ```sql
-    create table game(
-      id integer primary key identity(1,1) not null, -- auto-increment identifier
-      title nvarchar(500) not null unique,
-      rating tinyint not null check(rating <= 100),  -- value constraint
-      genre nvarchar(100) not null,
-      descr nvarchar(max)
-    );
-    ```
+  ```sql
+  create table game(
+    id integer primary key identity(1,1) not null, -- auto-increment identifier
+    title nvarchar(500) not null unique,
+    rating tinyint not null check(rating <= 100),  -- value constraint
+    genre nvarchar(100) not null,
+    descr nvarchar(max)
+  );
+  ```
     
   4. Fill table with actual games data:
   
-    ```sql
-    insert into game(title, rating, genre, descr)
-    values ('Dark Souls', 89, 'role-playing', 'Dark fantasy RPG...');
-    ```
+  ```sql
+  insert into game(title, rating, genre, descr)
+  values ('Dark Souls', 89, 'role-playing', 'Dark fantasy RPG...');
+  ```
   5. Add as many records as you wish 😋
 
-###API Routes
+### API Routes
 List of available demo API routes with associated REST verbs
   * http://localhost:5000/ – GET
   * http://localhost:5000/games – GET, POST
   * http://localhost:5000/games/:gameId – GET, PUT, DELETE
 
-###Testing RESTful API with Postman
+### Testing RESTful API with Postman
 To test __GET__ method of our demo API (it reads records from database):
   1. Select __GET__ from drop-down and type required url into input box, in this case __http://localhost:5000/api/games/__
   2. Press *Send* and voilà – in the section below response *body* and *http status code* will be displayed
