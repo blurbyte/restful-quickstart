@@ -75,8 +75,10 @@ To test __GET__ method of our demo API (it reads records from database):
   1. Select __GET__ from drop-down and type required url into input box, in this case __http://localhost:5000/api/games/__
   2. Press *Send* and voilà – in the section below response *body* and *http status code* will be displayed
   <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-get-example.png" alt="Testing GET method with Postman for multiple elements" width="600">
+
   3. Type __http://localhost:5000/api/games/1__ and check response for single item (response body and status code)  
   <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-get-example2.png" alt="Testing GET method with Postman for single id" width="600">
+  
   4. Do the same for *id* which doesn't exist, for example __http://localhost:5000/api/games/47__
 
 To test __POST__ method (it creates new record in database):
