@@ -82,10 +82,12 @@ To test __GET__ method of our demo API (it reads records from database):
 To test __POST__ method (it creates new record in database):
   1. Select __POST__ and type __http://localhost:5000/api/games/__
   2. In section just below serch box select *Headers* tab and provide __Content-Type__ as a key and __application/json__ as a value
-  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-post-header.png" alt="Setting up POST method Header in Postman" width="600">        
+  <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-post-header.png" alt="Setting up POST method Header in Postman" width="600">
+
   3. Select *Body* tab and *raw* option
   4. Type all required info about game in a textbox in JSON format
   <img src="http://eloriel.azureedge.net/restful-quickstrt/restful-quickstart-postman-post-body.png" alt="Setting up POST method Header in Postman" width="600">
+  
   5. After sending request check response body and status
   6. Try to send exacly same data again
 
